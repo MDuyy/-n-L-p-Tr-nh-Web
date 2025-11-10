@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Trang Chủ - Cửa Hàng</title>
+
+    <!-- Bootstrap 5 CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/quartz/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap Icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    <header class="header-section">
+      <div class="container-fluid px-4">
+        <div class="row align-items-center py-2">
+          <!-- Navigation Menu -->
+
+          <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <!--
+                        Bí thuật nằm ở đây nè (me-auto) làm cho các phần tử bên trong giữ nguyên
+                        còn đứa nào ở ngoài me-auto trong cái div này thì cúc xuống cuối-->
+                <ul class="navbar-nav me-auto nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="Index.html"
+                      >Trang chủ
+                      <span class="visually-hidden">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link bg-"
+                      data-bs-toggle="tab"
+                      aria-selected="true"
+                      role="tab"
+                      href="#"
+                      >Liên hệ</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Giới thiệu</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      >Dropdown</a
+                    >
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                  </li>
+                </ul>
+                <!--Thế là seach, login và giỏ hàng là cúc xuống-->
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Giỏ hàng</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input
+                    class="form-control me-sm-2"
+                    type="search"
+                    placeholder="Search"
+                  />
+                  <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Phần Chính: Chi Tiết Sản Phẩm (Fast Food) -->
+    <div class="container my-5">
+      <div class="row">
+        <!-- Cột Hình Ảnh Sản Phẩm (Hình ảnh đồ ăn) -->
+        <div class="col-md-6">
+          <div
+            id="productCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://via.placeholder.com/600x400?text=Burger+Deluxe"
+                  class="d-block w-100 rounded"
+                  alt="Burger Deluxe"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://via.placeholder.com/600x400?text=Burger+Side"
+                  class="d-block w-100 rounded"
+                  alt="Burger với khoai"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://via.placeholder.com/600x400?text=Burger+Combo"
+                  class="d-block w-100 rounded"
+                  alt="Combo Burger"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#productCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#productCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cột Thông Tin Sản Phẩm (Fast Food) -->
+        <div class="col-md-6">
+          <h1 class="display-5 text-fastfood">Burger Deluxe</h1>
+          <p class="text-muted">Danh mục: Burger</p>
+          <h3 class="text-success">Giá: 45.000 VND</h3>
+          <p class="lead">
+            Burger ngon miệng với thịt bò tươi, rau xanh, và sốt đặc biệt. Hoàn
+            hảo cho bữa ăn nhanh!
+          </p>
+
+          <!-- Lựa chọn kích cỡ combo -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">Kích cỡ Combo:</label>
+            <div class="btn-group" role="group">
+              <input
+                type="radio"
+                class="btn-check"
+                name="size"
+                id="sizeSingle"
+                autocomplete="off"
+                checked
+              />
+              <label class="btn btn-outline-warning" for="sizeSingle"
+                >Đơn (45k)</label
+              >
+              <input
+                type="radio"
+                class="btn-check"
+                name="size"
+                id="sizeCombo"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-warning" for="sizeCombo"
+                >Combo + Khoai + Nước (65k)</label
+              >
+            </div>
+          </div>
+
+          <!-- Lựa chọn topping thêm -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">Topping Thêm:</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="extraCheese"
+              />
+              <label class="form-check-label" for="extraCheese"
+                >Phô mai thêm (+5k)</label
+              >
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="extraBacon"
+              />
+              <label class="form-check-label" for="extraBacon"
+                >Thịt xông khói (+10k)</label
+              >
+            </div>
+          </div>
+
+          <!-- Số lượng -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">Số lượng:</label>
+            <input
+              type="number"
+              class="form-control"
+              value="1"
+              min="1"
+              style="width: 100px"
+            />
+          </div>
+
+          <!-- Nút hành động -->
+          <button class="btn btn-fastfood btn-lg me-2">
+            Thêm vào Giỏ Hàng
+          </button>
+          <button class="btn btn-warning btn-lg">Đặt Ngay</button>
+        </div>
+      </div>
+
+      <!-- Phần Bổ Sung: Tabs (Phù hợp fast food) -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <ul class="nav nav-tabs" id="productTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="description-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#description"
+                type="button"
+                role="tab"
+                aria-controls="description"
+                aria-selected="true"
+              >
+                Mô Tả
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="ingredients-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#ingredients"
+                type="button"
+                role="tab"
+                aria-controls="ingredients"
+                aria-selected="false"
+              >
+                Nguyên Liệu
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="reviews-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#reviews"
+                type="button"
+                role="tab"
+                aria-controls="reviews"
+                aria-selected="false"
+              >
+                Đánh Giá
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content mt-3" id="productTabsContent">
+            <div
+              class="tab-pane fade show active"
+              id="description"
+              role="tabpanel"
+              aria-labelledby="description-tab"
+            >
+              <p>
+                Burger Deluxe là món ăn nhanh yêu thích với thịt bò 100% tươi,
+                rau xà lách giòn tan, cà chua và sốt mayonnaise. Phù hợp cho mọi
+                bữa ăn!
+              </p>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="ingredients"
+              role="tabpanel"
+              aria-labelledby="ingredients-tab"
+            >
+              <ul>
+                <li>Thịt bò nướng</li>
+                <li>Bánh mì burger</li>
+                <li>Rau xà lách, cà chua</li>
+                <li>Sốt đặc biệt</li>
+              </ul>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="reviews"
+              role="tabpanel"
+              aria-labelledby="reviews-tab"
+            >
+              <p>
+                ⭐⭐⭐⭐⭐ (4.8/5) - "Burger ngon quá, combo giá rẻ!" - Khách
+                hàng A.
+              </p>
+              <p>
+                ⭐⭐⭐⭐ - "Thêm topping bacon làm tăng vị ngon!" - Khách hàng
+                B.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Sản phẩm khác-->
+      <div>
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link" href="#">&laquo;</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">5</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">&raquo;</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container py-1">
+        <div class="product-row">
+          <!-- CARD 1 -->
+          <div class="card product-card shadow-sm">
+            <img
+              src="https://cdn2.fptshop.com.vn/unsafe/1080x0/filters:format(webp):quality(75)/cach_nau_bun_bo_tai_thumb_8c47b24d07.png"
+              class="card-img-top"
+              alt="Bún bò"
+            />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title mb-1">Bún bò</h5>
+                <p class="card-text text-muted small mb-2">Của nhà bà 5 á</p>
+                <p class="fw-bold text-danger mb-3">₫25.000</p>
+              </div>
+              <div class="btn-group-custom mt-auto">
+                <button class="btn btn-outline-primary flex-fill">
+                  Chi tiết
+                </button>
+                <button class="btn btn-primary flex-fill">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="card product-card shadow-sm">
+            <img
+              src="https://cdn.tgdd.vn/Files/2021/08/17/1375865/cach-nau-bun-rieu-cua-don-gian-thom-ngon-chuan-vi-tai-nha-202108171340354872.jpg"
+              class="card-img-top"
+              alt="Bún riêu"
+            />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title mb-1">Bún riêu</h5>
+                <p class="card-text text-muted small mb-2">Ngon mê ly</p>
+                <p class="fw-bold text-danger mb-3">₫30.000</p>
+              </div>
+              <div class="btn-group-custom mt-auto">
+                <button class="btn btn-outline-primary flex-fill">
+                  Chi tiết
+                </button>
+                <button class="btn btn-primary flex-fill">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="card product-card shadow-sm">
+            <img
+              src="https://cdn.tgdd.vn/2020/10/CookRecipe/Avatar/thit-kho-tau-thumbnail-1200x676-1.jpg"
+              class="card-img-top"
+              alt="Thịt kho tàu"
+            />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title mb-1">Thịt kho tàu</h5>
+                <p class="card-text text-muted small mb-2">Chuẩn vị miền Tây</p>
+                <p class="fw-bold text-danger mb-3">₫50.000</p>
+              </div>
+              <div class="btn-group-custom mt-auto">
+                <button class="btn btn-outline-primary flex-fill">
+                  Chi tiết
+                </button>
+                <button class="btn btn-primary flex-fill">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card product-card shadow-sm">
+            <img
+              src="https://cdn2.fptshop.com.vn/unsafe/1080x0/filters:format(webp):quality(75)/cach_nau_bun_bo_tai_thumb_8c47b24d07.png"
+              class="card-img-top"
+              alt="Bún bò"
+            />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title mb-1">Bún bò</h5>
+                <p class="card-text text-muted small mb-2">Của nhà bà 5 á</p>
+                <p class="fw-bold text-danger mb-3">₫25.000</p>
+              </div>
+              <div class="btn-group-custom mt-auto">
+                <button class="btn btn-outline-primary flex-fill">
+                  Chi tiết
+                </button>
+                <button class="btn btn-primary flex-fill">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="card product-card shadow-sm">
+            <img
+              src="https://cdn.tgdd.vn/Files/2021/08/17/1375865/cach-nau-bun-rieu-cua-don-gian-thom-ngon-chuan-vi-tai-nha-202108171340354872.jpg"
+              class="card-img-top"
+              alt="Bún riêu"
+            />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title mb-1">Bún riêu</h5>
+                <p class="card-text text-muted small mb-2">Ngon mê ly</p>
+                <p class="fw-bold text-danger mb-3">₫30.000</p>
+              </div>
+              <div class="btn-group-custom mt-auto">
+                <button class="btn btn-outline-primary flex-fill">
+                  Chi tiết
+                </button>
+                <button class="btn btn-primary flex-fill">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="card product-card shadow-sm">
+            <img
+              src="https://cdn.tgdd.vn/2020/10/CookRecipe/Avatar/thit-kho-tau-thumbnail-1200x676-1.jpg"
+              class="card-img-top"
+              alt="Thịt kho tàu"
+            />
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title mb-1">Thịt kho tàu</h5>
+                <p class="card-text text-muted small mb-2">Chuẩn vị miền Tây</p>
+                <p class="fw-bold text-danger mb-3">₫50.000</p>
+              </div>
+              <div class="btn-group-custom mt-auto">
+                <button class="btn btn-outline-primary flex-fill">
+                  Chi tiết
+                </button>
+                <button class="btn btn-primary flex-fill">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="bg-dark text-light pt-4 pb-3 mt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Cột 1: Thông tin -->
+          <div class="col-md-4 mb-3">
+            <h5 class="text-uppercase mb-3">NTTU with luv</h5>
+            <p>Một chiếc web với quả theme sến súa❤️</p>
+            <p>Cammonvidaden</p>
+          </div>
+
+          <!-- Cột 2: Liên hệ -->
+          <div class="col-md-4 mb-3">
+            <h5 class="text-uppercase mb-3">Liên Hệ</h5>
+            <ul class="list-unstyled">
+              <li>
+                <i class="bi bi-geo-alt-fill me-2"></i>TP. Hồ Chí Minh, Việt Nam
+              </li>
+              <li><i class="bi bi-telephone-fill me-2"></i>+84 56 4705 149</li>
+              <li><i class="bi bi-envelope-fill me-2"></i>1901duy@gmail.com</li>
+            </ul>
+          </div>
+
+          <!-- Cột 3: Mạng xã hội -->
+          <div class="col-md-4 mb-3">
+            <h5 class="text-uppercase mb-3">Theo Dõi Chúng Tôi</h5>
+            <div>
+              <a
+                href="https://www.facebook.com/Dyneahihi612?locale=vi_VN"
+                class="text-light me-3"
+                ><i class="bi bi-facebook fs-4"></i
+              ></a>
+              <a href="https://github.com/MDuyy" class="text-light"
+                ><i class="bi bi-github fs-4"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-secondary" />
+
+        <div class="text-center small">
+          © 2025 VietNamFood (VNF). All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
